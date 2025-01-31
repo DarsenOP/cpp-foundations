@@ -1,0 +1,17 @@
+# Ignore build directories
+/build/
+cmake-build-debug/
+cmake-build-release/
+CMakeCache.txt
+CMakeFiles/
+
+# Ignore IDE files (CLion, VS Code, etc.)
+.idea/
+.vscode/
+
+# Ignore object files and executables
+*.o
+*.obj
+*.exe
+*.out
+*.log
