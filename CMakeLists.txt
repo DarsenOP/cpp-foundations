@@ -3,4 +3,4 @@ project(cpp_foundations)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(cpp_foundations Day_2/Pointers.cpp)
+add_executable(cpp_foundations Day_2/Concepts.cpp)
