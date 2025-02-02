@@ -2,7 +2,7 @@
 // Created by DarsenOP on 2/2/25.
 //
 
-/* Varibales & Data Types */
+/* Variables & Data Types */
 
 #include <iostream>
 
