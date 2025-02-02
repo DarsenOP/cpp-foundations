@@ -3,4 +3,4 @@ project(cpp_foundations)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cpp_foundations Day_1/ProjectSetupTesting.cpp)
+add_executable(cpp_foundations Day_2/VariablesAndDataTypes.cpp)
