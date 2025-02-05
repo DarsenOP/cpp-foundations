@@ -1,0 +1,39 @@
+Progress Report – Task Manager CLI (Day 5)
+
+📅 Date: 02/05/25
+🕒 Time Spent: 6-8h
+✅ What I Did Today
+
+    Improved Input Parsing & Flag Handling
+         Refactored flag extraction to support multiple values (e.g., multiple --tags entries).
+         Ensured proper validation for required flags (e.g., --id for edit, delete, complete).
+         Used unordered_map for efficient flag storage and validation.
+
+    Enhanced Task Search Functionality
+         Implemented case-insensitive multi-word search for descriptions (--description).
+         Improved tag filtering (--tags) by ensuring exact matches but case-insensitive comparisons.
+         Refactored search logic to efficiently handle both filters simultaneously.
+         Optimized hidden task tracking using m_hidden_count to improve List() performance.
+
+    Improved Task Display & Formatting
+         Dynamically calculated column widths in List() for better table alignment.
+         Filtered out hidden tasks when displaying search results.
+         Optimized whitespace and table borders for readability.
+
+    Refactored Code for Efficiency & Readability
+         Replaced manual loops with std::ranges functions where applicable.
+         Optimized search conditions to reduce redundant checks.
+         Refactored ToLower() usage by applying it early in processing instead of per comparison.
+         Ensured proper flag validation before executing commands, avoiding unnecessary computations.
+
+    Improved Error Handling & User Feedback
+         Refined error messages for missing or invalid flag values.
+         Added more specific validation for date formats in --due.
+         Ensured search provides meaningful output even if no matches are found.
+
+📌 Next Steps
+
+     🔹 Implement Task Persistence – Save & load tasks from a file.
+     🔹 Add Sorting Functionality – Sort tasks by due date, priority, or ID.
+     🔹 Improve Task Filtering – Filter tasks based on status (pending or completed).
+     🔹 Optimize Command Execution – Minimize redundant flag checks and enhance UI feedback.

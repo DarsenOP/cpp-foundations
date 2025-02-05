@@ -1,3 +1,42 @@
-Started working on the first project : Task Manager CLI
-    - Completed the project setup
-    - And prototyped all main functionalities
+Progress Report – Task Manager CLI (Day 4)
+
+📅 Date: 02/04/25
+🕒 Time Spent: 6-8h
+✅ What I Did Today
+
+    Finalized Core Structure
+        Organized project with CMake.
+        Structured Manager.h, Manager.cpp, Tasks.h, and taskpch.h.
+
+    Implemented Core Task Management Features
+        add – Added tasks with --description, --priority, --due, --tags.
+        list – Displayed tasks in formatted table using std::setw.
+        edit – Modified task attributes (description, priority, status, due date).
+        delete – Removed tasks using --id.
+        complete – Marked tasks as completed.
+        help – Provided detailed help output for commands and flags.
+        exit – Implemented interactive CLI loop where users can type commands inside tasks>.
+
+    Improved Input Parsing
+        Handled quoted text correctly (e.g., "multi word input" stays together).
+        Extracted flags and values into m_flags map.
+        Implemented InitFlagMap() to parse user inputs properly.
+
+    Enhanced Error Handling
+        Validated commands (unknown commands show error + suggest help).
+        Checked missing flags (e.g., --id required for edit, delete, complete).
+        Prevented invalid ID crashes (used std::stoi inside try-catch).
+        Cleared m_flags after each command to avoid conflicts.
+
+    Refactored & Optimized Code
+        Used unordered_map for flag-value pairs (better efficiency).
+        Switched std::endl → "\n" for performance.
+        Ensured m_prev_id++ correctly assigns unique task IDs.
+
+📌 Next Steps
+
+    🔹 Implement Task Persistence – Save & load tasks from a file.
+    🔹 Improve Search & Filtering – Filter by priority, due date, tags.
+    🔹 Sort Tasks – Sort by due date, priority, or ID.
+    🔹 Handle Multi-Value Flags – Properly process multiple --tags.
+    🔹 Optimize UI – Improve feedback, command suggestions, etc.
