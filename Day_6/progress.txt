@@ -1,0 +1,42 @@
+Progress Report – Task Manager CLI (Day 6)
+
+📅 Date: 02/06/25
+🕒 Time Spent: 6-8h
+✅ What I Did Today
+
+    Advanced Search, Filter & Sorting
+        Fully implemented search with multi-word support for descriptions and exact match for tags.
+        Optimized filtering for priority, status, and date ranges (--due & --to).
+        Added sorting (sort --by priority --order asc/desc) with dynamic comparison functions.
+        Ensured sorting persists across sessions unless manually re-sorted.
+
+    Tag Management System
+        Implemented tag manipulation (tag --id X --add tag1, tag --id X --remove tag1).
+        Added tag --list to display all unique tags in a formatted column view.
+        Optimized tag storage using an unordered_map to track tag occurrences efficiently.
+        Ensured tag removal updates global tag storage correctly.
+
+    Undo System (History Tracking)
+        Implemented undo to revert the last action (add, delete, edit, tag modifications).
+        Used a deque to maintain an action history, automatically trimming older entries.
+        Limited history to 50 actions to prevent memory bloat.
+        Improved error handling when attempting to undo with an empty history.
+
+    Code Optimization & Refactoring
+        Streamlined m_hidden_count logic to reduce unnecessary count_if operations.
+        Consolidated redundant flag validation logic for better efficiency.
+        Improved function structure by breaking down large functions into smaller helper functions.
+        Used std::ranges and structured bindings to enhance code clarity and performance.
+
+    Improved Error Handling & User Feedback
+        Added detailed error messages for invalid input (e.g., sort --by without a value).
+        Ensured quoted text validation to prevent empty or whitespace-only descriptions.
+        Enhanced error feedback for negative or invalid task IDs.
+        Standardized console messages for clarity and consistency.
+
+📌 Next Steps
+
+    🔹 Task Persistence – Save & load tasks from a file (export/import).
+    🔹 User Configuration – Custom settings (config --default-priority medium).
+    🔹 Command Aliases – Support shorthand commands (e.g., ls for list).
+    🔹 Further Code Cleanup – Improve maintainability & documentation.
