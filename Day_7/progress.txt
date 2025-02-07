@@ -1,0 +1,54 @@
+Progress Report – Task Manager CLI (Day 7)
+
+📅 Date: 02/07/25
+🕒 Time Spent: 6-8h
+✅ What I Did Today
+    Import & Export System
+
+        Implemented task persistence using file I/O (import/export).
+        Supported three formats: CSV, JSON, and TXT for easy data portability.
+        Ensured robust error handling for malformed or missing files.
+        Duplicate ID prevention when importing, avoiding conflicts with existing tasks.
+        Auto-adjusted m_prev_id to prevent ID collisions after importing.
+
+    Configuration System
+
+        Introduced config file (config.json) to store user settings.
+        Added --default-priority setting to define a default priority for new tasks.
+        Ensured the config file is created on first run if missing.
+        Config values are validated before being applied to prevent incorrect settings.
+
+    Help System Overhaul
+
+        Rewritten Help() function for better clarity and organization.
+        Clearly structured commands into categories:
+            Task Management (add, delete, complete, edit)
+            Viewing & Searching (list, search, filter, sort)
+            Tag Management (tag --list, tag --id X --add/remove tag)
+            General (help, exit)
+        Added detailed examples for each command to assist new users.
+        Improved error messages and hints for invalid flag usage.
+
+    File Path Fix for Exports
+
+        Ensured that exported files are saved in a designated folder (~/Documents/TaskManagerCLI).
+        Fixed the issue where files were always saved in the build directory.
+        Used environment expansion (std::filesystem) to correctly interpret "~" for user home directory.
+
+    Code Optimization & Refactoring
+
+        Streamlined import/export logic, reducing redundant parsing code.
+        Improved error messages for invalid IDs, priorities, and file names.
+        Refactored flag parsing logic for better readability and maintainability.
+        Further optimized tag system to prevent unnecessary reallocation.
+
+    Aliases
+
+        Added aliases (shortcuts) for commands and flags like --d for --description or exp for export
+
+📌 Next Steps
+
+    🔹 Further Code Cleanup – Improve maintainability & documentation.
+    🔹 Potential Enhancements – Future polish & bug fixes if needed.
+
+🚀 Project Status: Task Manager CLI is fully functional! 🎉
