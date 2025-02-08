@@ -4,4 +4,6 @@ project(cpp_foundations)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(cpp_foundations
-        Day_5/Regex.cpp)
+        Day_8/CatchException.cpp
+        Day_8/result.h
+)

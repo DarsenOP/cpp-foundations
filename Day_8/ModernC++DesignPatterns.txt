@@ -1,0 +1,39 @@
+C++ Idioms
+
+1) RAII -> Resource Acquisition Is Initialization
+
+    class Foo() {
+        Foo() { // Do something }
+        ~Foo() { // Undo it }
+    };
+
+2) PIMPL -> Pointer to Implementation
+         -> Decouple implementation from use
+         -> Improve compilation
+
+    class Foo {
+        FooImpl *fp;
+        // ...
+    }
+
+    class FooImp { };
+
+3) Smart Pointers -> Overload of (->)
+                  -> Many uses in modern C++
+                  -> Manage resources
+                  -> Provide proxies
+                  -> Etc...
+
+4) CRTP -> Curiously Recurring Template Pattern
+        -> Static polymorphism
+        -> Removes need for virtual functions
+
+
+We will implement 6 patterns and idioms
+
+    1) RAII             IDIOM
+    2) State            DESIGN PATTERNS
+    3) Smart Pointers   IDIOM
+    4) PIMPL            IDIOM
+    5) CRTP             IDIOM
+    6) Singleton        DESIGN PATTERNS
