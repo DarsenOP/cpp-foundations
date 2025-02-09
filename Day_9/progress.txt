@@ -1,0 +1,37 @@
+Progress Report – File Manager CLI (Day 1)
+
+📅 Date: 02/09/25
+🕒 Time Spent: 5-6h
+✅ What I Did Today
+
+    File System Entity Design
+        Defined the core attributes common to all entities: ID, name, permissions, created at, and attributes.
+        Decided on a base class (SystemEntity) with two derived classes: FileSystemEntity (for files and directories) and AccountEntity (for users and groups).
+        Grouped file and directory classes under FileSystemEntity, and user and group classes under AccountEntity.
+
+    Logging Setup
+        Finalized a logging system using spdlog with a custom logger to handle different log levels (TRACE, DEBUG, INFO, WARN, ERROR).
+        Implemented logging for various exceptions and inputs.
+        Added a logging mechanism to track errors based on exception types and included timestamped logs for clarity.
+
+    Command Processor
+        Designed a CommandProcessor to handle user input commands.
+        Implemented parsing, normalization, and error handling for input strings, including spaces and quoted arguments.
+        Incorporated a Trim() and NormalizeSpaces() system to clean up input before processing.
+
+    Exception Handling
+        Implemented custom exceptions (EmptyInputException, NonIsolatedQuotedArgumentException, etc.) with tailored messages and logging levels.
+        Added exception handling in the CommandProcessor to trigger appropriate responses based on command validity.
+
+    Manager Class
+        Created the Manager class as the entry point for the file manager.
+        Integrated exception handling and user input processing into the Manager::Start() loop.
+        Log error levels and handle invalid inputs with an option to retry for specific errors (like empty input).
+
+📌 Next Steps
+
+    🔹 Start implementing specific attributes for the File, Directory, User, and Group classes.
+    🔹 Begin handling file I/O operations for reading and writing to simulated directories and files.
+    🔹 Continue improving exception handling and logging functionality.
+
+🚀 Project Status: Initial setup and foundational work are complete, now progressing to entity and file handling logic! 🎉
